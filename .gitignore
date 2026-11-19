@@ -1,0 +1,8 @@
+.env
+*.iso
+*.vhd
+*.vhdx
+artifacts/
+runtime/
+*.log
+
