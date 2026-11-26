@@ -57,14 +57,16 @@ Copy-Item .\config\lab.example.psd1 .\config\lab.psd1
 Сначала посмотрите план без изменений:
 
 ```powershell
-.\scripts\host\New-LabNetwork.ps1 -WhatIf
+.\scripts\host\Start-LabBootstrap.ps1 `
+  -ServerIsoPath C:\ISO\WindowsServer.iso `
+  -ClientIsoPath C:\ISO\Windows11.iso `
+  -WhatIf
 ```
 
-Затем запустите из PowerShell от администратора:
+Затем запустите ту же команду из PowerShell от администратора без `-WhatIf`:
 
 ```powershell
-.\scripts\host\New-LabNetwork.ps1
-.\scripts\host\New-LabVirtualMachines.ps1 `
+.\scripts\host\Start-LabBootstrap.ps1 `
   -ServerIsoPath C:\ISO\WindowsServer.iso `
   -ClientIsoPath C:\ISO\Windows11.iso
 ```
