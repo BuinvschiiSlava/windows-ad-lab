@@ -1,4 +1,5 @@
 .env
+config/lab.psd1
 *.iso
 *.vhd
 *.vhdx
